@@ -8,6 +8,8 @@
 1 Nodejs.v14 以上
 2 免费申请一个Alchemy wss api
 
+注意：Alchemy支持ETH和Polygon，其他公链需要用另外的api和调用方法，不懂的朋友通过最底下的电报联系我
+
 # 如何配置
 文件名：config.js
 
