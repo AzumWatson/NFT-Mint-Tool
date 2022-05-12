@@ -11,7 +11,8 @@
 注意：Alchemy支持ETH和Polygon，其他公链需要用另外的api和调用方法，不懂的朋友通过最底下的电报联系我
 
 # 如何配置
-文件名：config.js
+
+## 文件名：config.js
 
     // required. wallet privateKey, you can find it in your metamask
     privateKey : "<Your private key>",
@@ -49,32 +50,33 @@
     // optional. debug usage. The value should be "Rinkeby" for rinkeby, "Goerli" for goerli or "" for mainnet
     network : "Goerli"
 
-文件名：public.js, 只需要修改2个地方:
-  1. 修改Mint的函数名
-  本案例为：mintSAC
-  
-  //-----------------------------------------------------------------
-  //--------------- Change this function every time------------------
-  
-  let extraData =  await contract.methods.mintSAC(config.number);
-  
-  //-----------------------------------------------------------------
-  //-----------------------------------------------------------------
-  
-  2. 更改要监视的信号
-  本案例为：flipPublicSaleState，当监测到智能合约有这个动作，立即发出交易
-  
-  //-----------------------------------------------------------------
-  //--------------- Change this function every time------------------
-  
-  if((decodedData.name == 'flipPublicSaleState')){
-  
-  //-----------------------------------------------------------------
-  //-----------------------------------------------------------------
-  
-文件名：abi.json
+## 文件名：public.js, 只需要修改2个地方:
 
-你需要从智能合约中复制abi，并粘贴替换原有abi.json中的内容。 
+    1. 修改Mint的函数名
+    本案例为：mintSAC
+  
+    //-----------------------------------------------------------------
+    //--------------- Change this function every time------------------
+  
+    let extraData =  await contract.methods.mintSAC(config.number);
+  
+    //-----------------------------------------------------------------
+    //-----------------------------------------------------------------
+  
+    2. 更改要监视的信号
+    本案例为：flipPublicSaleState，当监测到智能合约有这个动作，立即发出交易
+  
+    //-----------------------------------------------------------------
+    //--------------- Change this function every time------------------
+  
+    if((decodedData.name == 'flipPublicSaleState')){
+  
+    //-----------------------------------------------------------------
+    //-----------------------------------------------------------------
+  
+## 文件名：abi.json
+
+    你需要从智能合约中复制abi，并粘贴替换原有abi.json中的内容。 
 
 # 所有隐私信息都存储在您的本地工作区中。Mint NFT不会发送任何个人信息或私钥。
 
