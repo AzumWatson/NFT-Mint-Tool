@@ -1,3 +1,5 @@
+# 被曝内含偷私钥的钓鱼脚本,目前留着自己参考学习
+
 # 科学家极速抢NFT工具
 
 以这个NFT发售为例 https://etherscan.io/address/0x984f7b398d577c0adde08293a53ae9d3b6b7a5c5
